@@ -1,0 +1,25 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^1.9.0",
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "googleapis": "^155.0.0",
+    "mongoose": "^8.16.3",
+    "mysql2": "^3.14.2",
+    "nodemon": "^3.1.10",
+    "react-loading-indicators": "^1.0.1"
+  }
+}
