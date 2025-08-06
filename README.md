@@ -51,7 +51,7 @@ npm start
 
 Visit http://localhost:3000 to authenticate.
 ````
-## Docker Setup
+## 🐳  Docker Setup
 Build and run the app using Docker:
 
 ```bash
