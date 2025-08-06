@@ -5,7 +5,7 @@ import authRoutes from "./Routes/authRoutes.js";
 import emailRoutes from "./Routes/emailRoutes.js";
 import startPolling from "./config/gmailPoller.js";
 import dotenv from "dotenv";
-// 
+ 
 dotenv.config();
 
 const app = express();
