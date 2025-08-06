@@ -54,9 +54,7 @@ Visit http://localhost:3000 to authenticate.
 ## Docker Setup
 Build and run the app using Docker:
 
-bash
-Copy
-Edit
-docker build -t listening-email .
+```bash
+docker build -t listening-email:backend .
 docker run -p 3000:3000 listening-email
 
