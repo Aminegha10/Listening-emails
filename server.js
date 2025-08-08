@@ -2,9 +2,9 @@ import express from "express";
 import fs from "fs";
 import { google } from "googleapis";
 import authRoutes from "./Routes/authRoutes.js";
-import emailRoutes from "./Routes/emailRoutes.js";
 import startPolling from "./config/gmailPoller.js";
 import dotenv from "dotenv";
+import logger from "./utils/logger.js";
 
 dotenv.config();
 
@@ -30,13 +30,14 @@ export const SCOPES = [
   "https://www.googleapis.com/auth/userinfo.profile",
   "https://www.googleapis.com/auth/userinfo.email",
   "https://www.googleapis.com/auth/gmail.readonly",
+  "https://www.googleapis.com/auth/gmail.modify",
 ];
 
 // Use routes
 app.use(authRoutes);
-app.use(emailRoutes);
 
 app.get("/", (req, res) => {
+  logger.info("GET / called");
   res.send(`
     <h2>📩 Gmail Polling App</h2>
     <a href="/auth">Authenticate with Google</a><br>
